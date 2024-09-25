@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import './App.css';
+import CatList from './CatList.jsx';
+import CatDetails from './CatDetails.jsx';
+import Contact from './Contact.jsx';
+import Layout from './Layout.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <CatList />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: "/details/:id",
+        element: <CatDetails />
+      }
+    ]
+  }
+
+
+
+
+
+
+
+
+]);
 
 function App() {
   return (
+    <RouterProvider router={router} />
+  )
+
+  /*return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CatList />
     </div>
-  );
+  );*/
 }
 
 export default App;
