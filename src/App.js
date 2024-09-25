@@ -6,6 +6,7 @@ import CatDetails from './CatDetails.jsx';
 import Contact from './Contact.jsx';
 import Layout from './Layout.jsx';
 import About from './About.jsx';
+import Products from './Products.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <About />
+      },
+      {
+        path: "/products",
+        element: <Products />
       },
       {
         path: "/details/:id",
