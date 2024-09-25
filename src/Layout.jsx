@@ -11,6 +11,7 @@ export default function Layout() {
                 </div>
                 <div className="menu">
                     <Link to="/contact" >Kapcsolat</Link>
+                    <Link to="/about-us" >Rólunk</Link>
                     <a href="https://codecool.com">Codecool</a>
                 </div>
             </nav>
